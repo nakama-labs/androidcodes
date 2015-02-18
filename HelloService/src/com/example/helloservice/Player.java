@@ -99,4 +99,23 @@ public class Player
 		if(card_value == 12)
 			Log.e("Card","Queen");
 	}
+	
+	int play_card(int index)
+	{
+		int card = -1;
+		try
+		{
+			if((index >= 0) && (index < my_cards.size()))
+				card = my_cards.remove(index);
+			else
+				card = -1;
+			return card;
+		}
+		catch(Exception ex)
+		{
+			Log.e("Player",ex.toString());
+			return -1;
+		}
+	}
+
 }

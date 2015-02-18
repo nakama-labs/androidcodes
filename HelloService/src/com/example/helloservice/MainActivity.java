@@ -84,6 +84,8 @@ public class MainActivity extends ActionBarActivity {
     	   Log.e("IP is ",ip);
     	   EditText et = (EditText) findViewById(R.id.local_ip);
     	   et.setText(ip);
+    	   
+    	   /* Game init is done here for time being.. */
     	   card_obj = new Cards();
     	   card_obj.build_deck();
     	   card_obj.shuffle_deck();
@@ -97,6 +99,8 @@ public class MainActivity extends ActionBarActivity {
 	   et.setText("Service Stopped");
 	   String newstr = ai_obj.getnewval();
     //   Log.e("AI diff",newstr);
+	   
+	   /* Game logic is tested here for time being.. */
        TextView tv = (TextView) findViewById(R.id.random_str);
        tv.setText(newstr); 
        Human h = new Human(1,2);
@@ -106,6 +110,7 @@ public class MainActivity extends ActionBarActivity {
     	   h.set_my_cards(card);
        }
        h.print_my_cards();
+       card_obj.set_open_card();
     }
     
     /** Defines callbacks for service binding, passed to bindService() */
