@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stopService"
+        android:text="@string/stop_service"
+        android:layout_alignTop="@+id/btnStartService"
+        android:layout_alignRight="@+id/local_ip"
+        android:layout_alignEnd="@+id/local_ip" />
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startService"
+        android:text="@string/start_service"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/local_ip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStopService"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Local IP is.." >
+
+        <requestFocus />
+    </EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_deck"
+        android:id="@+id/pickDeck"
+        android:onClick="pickDeck"
+        android:layout_alignRight="@+id/btnStartService"
+        android:layout_alignEnd="@+id/btnStartService" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_open"
+        android:id="@+id/pickOpen"
+        android:onClick="pickOpen"
+        android:layout_alignLeft="@+id/btnStopService"
+        android:layout_alignStart="@+id/btnStopService" />
+
+</RelativeLayout>
